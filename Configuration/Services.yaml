@@ -1,0 +1,31 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  OrleansMetropole\SendethicTypo3\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  # Services publics pour utilisation externe
+  OrleansMetropole\SendethicTypo3\Service\NewsletterUnsubscribeLinkService:
+    public: true
+
+  OrleansMetropole\SendethicTypo3\Service\NewsletterSegmentManager:
+    public: true
+
+  # Configuration des contrôleurs
+  OrleansMetropole\SendethicTypo3\Controller\NewsletterUnsubscribeController:
+    tags:
+      - name: 'controller.service_arguments'
+    arguments:
+      $linkService: '@OrleansMetropole\SendethicTypo3\Service\NewsletterUnsubscribeLinkService'
+      $segmentManager: '@OrleansMetropole\SendethicTypo3\Service\NewsletterSegmentManager'
+
+  # Configuration des commandes CLI
+  OrleansMetropole\SendethicTypo3\Command\GenerateUnsubscribeLinksCommand:
+    tags:
+      - name: 'console.command'
+        command: 'sendethic:generate-links'
+        description: 'Génère des liens de désinscription newsletter' 

@@ -1,0 +1,39 @@
+plugin.tx_sendethictypo3 {
+    view {
+        templateRootPaths {
+            0 = EXT:sendethic_typo3/Resources/Private/Templates/
+            1 = {$plugin.tx_sendethictypo3.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:sendethic_typo3/Resources/Private/Partials/
+            1 = {$plugin.tx_sendethictypo3.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:sendethic_typo3/Resources/Private/Layouts/
+            1 = {$plugin.tx_sendethictypo3.view.layoutRootPath}
+        }
+    }
+    persistence {
+        storagePid = {$plugin.tx_sendethictypo3.persistence.storagePid}
+    }
+    features {
+        skipDefaultArguments = 1
+    }
+    mvc {
+        callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+# Configuration des routes pour le plugin
+config.tx_extbase {
+    persistence {
+        classes {
+            OrleansMetropole\SendethicTypo3\Domain\Model\* {
+                mapping {
+                    tableName = tt_content
+                    recordType = 0
+                }
+            }
+        }
+    }
+} 

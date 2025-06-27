@@ -1,0 +1,16 @@
+# CustomCategory: sendethic_typo3=Sendethic Newsletter
+
+plugin.tx_sendethictypo3 {
+    view {
+        # cat=plugin.tx_sendethictypo3/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:sendethic_typo3/Resources/Private/Templates/
+        # cat=plugin.tx_sendethictypo3/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:sendethic_typo3/Resources/Private/Partials/
+        # cat=plugin.tx_sendethictypo3/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:sendethic_typo3/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_sendethictypo3//a; type=string; label=Default storage PID
+        storagePid =
+    }
+} 

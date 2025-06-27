@@ -1,0 +1,57 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="NewsletterUnsubscribe/Default" />
+
+<f:section name="Main">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="mb-0">
+                            <i class="fas fa-trash-alt me-2"></i>
+                            Suppression complète des données (RGPD)
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-warning">
+                            <h4>Action irréversible</h4>
+                            <p class="mb-0">
+                                <strong>Email :</strong> {email}<br>
+                                <strong>Newsletters actives :</strong>
+                            </p>
+                            <ul class="mt-2 mb-0">
+                                <f:for each="{segments}" as="segmentName" key="segmentId">
+                                    <li>{segmentName}</li>
+                                </f:for>
+                            </ul>
+                        </div>
+                        
+                        <p>Êtes-vous sûr de vouloir supprimer toutes vos données personnelles ?</p>
+                        <p class="text-muted">
+                            <small>
+                                <i class="fas fa-info-circle me-1"></i>
+                                Cette action respecte votre droit à l'effacement (RGPD). 
+                                Toutes vos données personnelles seront définitivement supprimées de nos bases.
+                            </small>
+                        </p>
+                        
+                        <div class="d-flex gap-3 mt-4">
+                            <f:form action="confirmDeleteAll" method="post" arguments="{token: token, confirmed: 1}">
+                                <button type="submit" class="btn btn-danger mt-0" onclick="return confirm('Êtes-vous absolument sûr de vouloir supprimer toutes vos données ? Cette action est irréversible.')">
+                                    <i class="fas fa-trash-alt me-1"></i>
+                                    Oui, supprimer toutes mes données
+                                </button>
+                            </f:form>
+                            
+                            <a href="/" class="btn btn-secondary">
+                                <i class="fas fa-times me-1"></i>
+                                Annuler
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>
+</html> 

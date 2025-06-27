@@ -1,0 +1,45 @@
+{
+  "name": "orleans-metropole/sendethic-typo3",
+  "description": "Plugin TYPO3 pour la gestion des désabonnements newsletter via l'API Sendethic",
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "newsletter",
+    "sendethic",
+    "unsubscribe",
+    "rgpd"
+  ],
+  "type": "typo3-cms-extension",
+  "authors": [
+    {
+      "name": "Orléans Métropole",
+      "role": "Developer",
+      "homepage": "https://www.orleans-metropole.fr"
+    }
+  ],
+  "license": [
+    "GPL-2.0+"
+  ],
+  "require": {
+    "typo3/cms-core": "^12.4",
+    "typo3/cms-backend": "^12.4",
+    "typo3/cms-frontend": "^12.4",
+    "typo3/cms-extbase": "^12.4",
+    "typo3/cms-fluid": "^12.4",
+    "guzzlehttp/guzzle": "^7.0",
+    "swagger-api/swagger-codegen": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "OrleansMetropole\\SendethicTypo3\\": "Classes/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    },
+    "typo3/cms": {
+      "extension-key": "sendethic_typo3"
+    }
+  }
+} 
