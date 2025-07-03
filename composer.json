@@ -27,12 +27,11 @@
     "typo3/cms-extbase": "^12.4",
     "typo3/cms-fluid": "^12.4",
     "guzzlehttp/guzzle": "^7.0",
-    "swagger-api/swagger-codegen": "^3.0",
-    "orleans-metropole/sendhetic": "dev-main"
+    "orleans-metropole/sendethic-api": "dev-main"
   },
   "autoload": {
     "psr-4": {
-      "OrleansMetropole\\Sendethic\\": "Classes/"
+      "OrleansMetropole\\SendethicTypo3\\": "Classes/"
     }
   },
   "extra": {
