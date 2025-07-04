@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="NewsletterUnsubscribe/Default" />
+
+<f:section name="Main">
+    <div class="newsletter-unsubscribe">
+        <div class="newsletter-unsubscribe__container">
+            <div class="newsletter-unsubscribe__card">
+                <div class="newsletter-unsubscribe__header">
+                    <h2>Suppression complète des données (RGPD)</h2>
+                </div>
+                <div class="newsletter-unsubscribe__body">
+                    <div class="newsletter-unsubscribe__alert newsletter-unsubscribe__alert--warning">
+                        <h4>Action irréversible</h4>
+                        <p>
+                            <strong>Email :</strong> {email}<br>
+                            <strong>Newsletters actives :</strong>
+                        </p>
+                        <ul>
+                            <f:for each="{segments}" as="segmentName" key="segmentId">
+                                <li>{segmentName}</li>
+                            </f:for>
+                        </ul>
+                    </div>
+                    
+                    <p>Êtes-vous sûr de vouloir supprimer toutes vos données personnelles ?</p>
+                    <p class="newsletter-unsubscribe__info">
+                        Cette action respecte votre droit à l'effacement (RGPD). 
+                        Toutes vos données personnelles seront définitivement supprimées de nos bases.
+                    </p>
+                    
+                    <div class="newsletter-unsubscribe__actions">
+                        <f:form action="confirmDeleteAll" method="post" arguments="{token: token, confirmed: 1}">
+                            <button type="submit" class="newsletter-unsubscribe__button newsletter-unsubscribe__button--danger" onclick="return confirm('Êtes-vous absolument sûr de vouloir supprimer toutes vos données ? Cette action est irréversible.')">
+                                Oui, supprimer toutes mes données
+                            </button>
+                        </f:form>
+                        
+                        <a href="/" class="newsletter-unsubscribe__button newsletter-unsubscribe__button--secondary">
+                            Annuler
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>
+</html> 

@@ -1,0 +1,12 @@
+# Configuration de site pour l'extension Sendethic TYPO3
+# Ce fichier peut être inclus dans les configurations de site TYPO3
+
+imports:
+  - resource: 'EXT:sendethic_typo3/Configuration/TypoScript/setup.typoscript'
+  - resource: 'EXT:sendethic_typo3/Configuration/TypoScript/constants.typoscript'
+
+# Configuration spécifique pour les sites utilisant cette extension
+settings:
+  sendethic:
+    enabled: true
+    # Autres paramètres spécifiques au site si nécessaire 

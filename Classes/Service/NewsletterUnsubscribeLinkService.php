@@ -132,7 +132,7 @@ class NewsletterUnsubscribeLinkService
     {
         $pid = $site->getConfiguration()['newsletterUnsubscribePid'] ?? 0;
         $base = $site->getRouter()->generateUri($pid);
-        $routePath = $site->getConfiguration()['routeEnhancers']['NewsletterUnsubscribe']['routePath'] ?? '';
+        $routePath = $site->getConfiguration()['routeEnhancers']['SendethicUnsubscribe']['routePath'] ?? '';
 
         if ($pid === 0 || $base === null || $routePath === null) {
             throw new \Exception('NewsletterUnsubscribeLinkService: PID or base is null');

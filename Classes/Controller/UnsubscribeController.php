@@ -17,7 +17,7 @@ use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use OrleansMetropole\SendethicTypo3\Service\NewsletterUnsubscribeLinkService;
 use OrleansMetropole\SendethicTypo3\Service\NewsletterSegmentManager;
 
-class NewsletterUnsubscribeController extends ActionController implements LoggerAwareInterface
+class UnsubscribeController extends ActionController implements LoggerAwareInterface
 {
     use LoggerAwareTrait;
 
@@ -200,9 +200,8 @@ class NewsletterUnsubscribeController extends ActionController implements Logger
 
         $contactApi = new ContactApi(new Client([]), $config);
         $return = $contactApi->contactGetContactAttributeKey($email);
-        
         $contactData = current($return);
-        
+
         if (!$contactData) {
             throw new \Exception('Contact non trouvé');
         }
@@ -234,20 +233,17 @@ class NewsletterUnsubscribeController extends ActionController implements Logger
             ->setPassword($site->getAttribute('sendethicApiPassword'));
 
         $contactApi = new ContactApi(new Client([]), $config);
-
         $attributes = [
             [
                 'id' => $segmentId,
                 'fieldValue' => '0' // Valeur pour désinscription
-            ]   
+            ]
         ];
-
         $contact = [
             'id' => 0,
             'contactKey' => $email,
             'attributes' => $attributes,
         ];
-
         $contactApi->contactPostContactAttributeKey($contact);
     }
 

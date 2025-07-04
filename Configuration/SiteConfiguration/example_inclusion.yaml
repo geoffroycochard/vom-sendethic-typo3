@@ -1,0 +1,19 @@
+# Exemple d'inclusion de l'extension Sendethic TYPO3 dans un site-package
+# Copier ce contenu dans le fichier de configuration de votre site
+
+imports:
+  # Inclure l'extension Sendethic TYPO3
+  - resource: 'EXT:sendethic_typo3/Configuration/SiteConfiguration/sendethic_typo3.yaml'
+
+# Configuration spécifique du site
+settings:
+  # Vos paramètres de site ici
+  site:
+    name: 'Mon Site'
+  
+# Configuration des plugins si nécessaire
+plugin:
+  tx_sendethictypo3:
+    settings:
+      # Personnalisation des paramètres si nécessaire
+      custom_setting: 'value' 

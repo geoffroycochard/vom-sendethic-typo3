@@ -54,9 +54,9 @@ routeEnhancers:
   NewsletterUnsubscribe:
     type: Plugin
     routePath: '/newsletter/unsubscribe/{action}/{token}'
-    namespace: 'tx_sendethictypo3_newsletterunsubscribe'
+    namespace: 'tx_sendethictypo3_unsubscribe'
     defaults:
-      controller: 'NewsletterUnsubscribe'
+      controller: 'Unsubscribe'
       action: 'unsubscribeSegment'
     requirements:
       action: 'unsubscribeSegment|confirmSegmentUnsubscribe|unsubscribeAll|confirmDeleteAll|success|error'

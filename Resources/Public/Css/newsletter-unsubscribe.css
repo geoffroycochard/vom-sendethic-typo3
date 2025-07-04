@@ -1,0 +1,171 @@
+/* Newsletter Unsubscribe - Styles génériques sans Bootstrap */
+
+.newsletter-unsubscribe {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.newsletter-unsubscribe__container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.newsletter-unsubscribe__card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.newsletter-unsubscribe__header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.newsletter-unsubscribe__header--error {
+    background: #dc3545;
+}
+
+.newsletter-unsubscribe__header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.newsletter-unsubscribe__body {
+    padding: 20px;
+}
+
+.newsletter-unsubscribe__alert {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-left: 4px solid;
+}
+
+.newsletter-unsubscribe__alert--error {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.newsletter-unsubscribe__alert--success {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.newsletter-unsubscribe__alert--warning {
+    background-color: #fff3cd;
+    border-color: #ffc107;
+    color: #856404;
+}
+
+.newsletter-unsubscribe__alert--info {
+    background-color: #d1ecf1;
+    border-color: #17a2b8;
+    color: #0c5460;
+}
+
+.newsletter-unsubscribe__alert h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.newsletter-unsubscribe__alert p {
+    margin: 0 0 10px 0;
+}
+
+.newsletter-unsubscribe__alert ul {
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+}
+
+.newsletter-unsubscribe__info {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 15px 0;
+}
+
+.newsletter-unsubscribe__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.newsletter-unsubscribe__button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.newsletter-unsubscribe__button:hover {
+    transform: translateY(-1px);
+}
+
+.newsletter-unsubscribe__button--primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.newsletter-unsubscribe__button--primary:hover {
+    background-color: #0056b3;
+}
+
+.newsletter-unsubscribe__button--secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.newsletter-unsubscribe__button--secondary:hover {
+    background-color: #545b62;
+}
+
+.newsletter-unsubscribe__button--danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.newsletter-unsubscribe__button--danger:hover {
+    background-color: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .newsletter-unsubscribe {
+        padding: 10px;
+    }
+    
+    .newsletter-unsubscribe__container {
+        padding: 10px 0;
+    }
+    
+    .newsletter-unsubscribe__header,
+    .newsletter-unsubscribe__body {
+        padding: 15px;
+    }
+    
+    .newsletter-unsubscribe__actions {
+        flex-direction: column;
+    }
+    
+    .newsletter-unsubscribe__button {
+        width: 100%;
+        text-align: center;
+    }
+} 

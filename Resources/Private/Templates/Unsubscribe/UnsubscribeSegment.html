@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="NewsletterUnsubscribe/Default" />
+
+<f:section name="Main">
+    <div class="newsletter-unsubscribe">
+        <div class="newsletter-unsubscribe__container">
+            <div class="newsletter-unsubscribe__card">
+                <div class="newsletter-unsubscribe__header">
+                    <h2>Confirmation de désinscription</h2>
+                </div>
+                <div class="newsletter-unsubscribe__body">
+                    <div class="newsletter-unsubscribe__alert newsletter-unsubscribe__alert--info">
+                        <h4>Vous êtes sur le point de vous désinscrire</h4>
+                        <p>
+                            <strong>Email :</strong> {email}<br>
+                            <strong>Newsletter :</strong> {segmentName}
+                        </p>
+                    </div>
+                    
+                    <p>Êtes-vous sûr de vouloir vous désinscrire de cette newsletter ?</p>
+                    <p class="newsletter-unsubscribe__info">
+                        Vous ne recevrez plus d'emails de cette newsletter. 
+                        Vous pourrez vous réinscrire à tout moment via nos formulaires d'inscription.
+                    </p>
+                    
+                    <div class="newsletter-unsubscribe__actions">
+                        <f:form action="confirmSegmentUnsubscribe" method="post" arguments="{token: token, confirmed: 1}">
+                            <button type="submit" class="newsletter-unsubscribe__button newsletter-unsubscribe__button--primary">
+                                Oui, me désinscrire
+                            </button>
+                        </f:form>
+                        
+                        <a href="/" class="newsletter-unsubscribe__button newsletter-unsubscribe__button--secondary">
+                            Annuler
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>
+</html> 

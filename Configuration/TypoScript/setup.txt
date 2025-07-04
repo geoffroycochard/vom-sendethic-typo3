@@ -1,0 +1,28 @@
+# Configuration TypoScript pour l'extension Sendethic TYPO3
+# Fichier statique à inclure dans les templates de page
+
+# Inclure les constantes
+@import 'EXT:sendethic_typo3/Configuration/TypoScript/constants.typoscript'
+
+# Configuration des plugins
+plugin.tx_sendethictypo3 {
+    view {
+        templateRootPaths {
+            0 = EXT:sendethic_typo3/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = EXT:sendethic_typo3/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = EXT:sendethic_typo3/Resources/Private/Layouts/
+        }
+    }
+    
+    # Configuration des paramètres par défaut
+    settings {
+        # Paramètres spécifiques à l'extension si nécessaire
+    }
+}
+
+# Inclure le CSS pour les templates newsletter
+page.includeCSS.newsletterUnsubscribe = EXT:sendethic_typo3/Resources/Public/Css/newsletter-unsubscribe.css 

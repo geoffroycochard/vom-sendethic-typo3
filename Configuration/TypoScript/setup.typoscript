@@ -36,4 +36,24 @@ config.tx_extbase {
             }
         }
     }
+}
+
+# Newsletter Unsubscribe - Configuration TypoScript
+
+# Inclure le CSS pour les templates newsletter
+page.includeCSS.newsletterUnsubscribe = EXT:sendethic_typo3/Resources/Public/Css/newsletter-unsubscribe.css
+
+# Configuration des templates newsletter
+plugin.tx_sendethic_newsletter {
+    view {
+        templateRootPaths {
+            0 = EXT:sendethic_typo3/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = EXT:sendethic_typo3/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = EXT:sendethic_typo3/Resources/Private/Layouts/
+        }
+    }
 } 

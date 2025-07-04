@@ -15,14 +15,6 @@ services:
   OrleansMetropole\SendethicTypo3\Service\NewsletterSegmentManager:
     public: true
 
-  # Configuration des contrôleurs
-  OrleansMetropole\SendethicTypo3\Controller\NewsletterUnsubscribeController:
-    tags:
-      - name: 'controller.service_arguments'
-    arguments:
-      $linkService: '@OrleansMetropole\SendethicTypo3\Service\NewsletterUnsubscribeLinkService'
-      $segmentManager: '@OrleansMetropole\SendethicTypo3\Service\NewsletterSegmentManager'
-
   # Configuration des commandes CLI
   OrleansMetropole\SendethicTypo3\Command\GenerateUnsubscribeLinksCommand:
     tags:

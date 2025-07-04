@@ -1,5 +1,8 @@
 # CustomCategory: sendethic_typo3=Sendethic Newsletter
 
+# Constantes TypoScript pour l'extension Sendethic TYPO3
+
+# Configuration des chemins des ressources
 plugin.tx_sendethictypo3 {
     view {
         # cat=plugin.tx_sendethictypo3/file; type=string; label=Path to template root (FE)
@@ -13,4 +16,12 @@ plugin.tx_sendethictypo3 {
         # cat=plugin.tx_sendethictypo3//a; type=string; label=Default storage PID
         storagePid =
     }
-} 
+    
+    # Paramètres par défaut
+    settings {
+        # Configuration par défaut
+    }
+}
+
+# Styles CSS
+page.includeCSS.sendethicNewsletter = EXT:sendethic_typo3/Resources/Public/Css/newsletter-unsubscribe.css 
